@@ -14,6 +14,7 @@ OmniLogger is a flexible and powerful logging library for Go, designed to suppor
 ### Creating a Logger
 OmniLogger requires a configuration file or struct that specifies which log levels should be enabled. You can create a Config struct to manage these settings or use LoadConfig function provided to read from a json file. You can create an instance of the logger by passing a configuration and one or more log drivers (e.g., CLI driver for console output).
     ```go
+    
     cliDriver := &omnilogger.CLIDriver{} 
     logger := omnilogger.NewOmniLogger(config, nil, cliDriver)
 
