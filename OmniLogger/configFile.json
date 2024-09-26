@@ -1,8 +1,0 @@
-{
-    "log_levels": {
-      "DEBUG": true,
-      "INFO": true,
-      "WARN": true,
-      "ERROR": true
-    }
-}
