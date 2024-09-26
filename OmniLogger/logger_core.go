@@ -54,8 +54,8 @@ func (l *OmniLogger) captureStackTrace() string {
 
 // logWritter writes a log message to all configured drivers.
 func (l *OmniLogger) logWritter(level LogLevel, message string) {
-	if ok := l.config.LogLevels[level]; !ok {
-		return // Skip logging if the log level is not enabled.
+	if enabled, ok := l.config.LogLevels[level]; !ok || !enabled {
+		return
 	}
 
 	stack := l.captureStackTrace()

@@ -26,9 +26,9 @@ func AddDriver(drivers ...LoggerDriver) {
 }
 
 // GetOmniLoggerWithContext retrieves a copy of the global logger instance with a specified context.
-func GetOmniLoggerWithContext(ctx Context) (OmniLogger, error) {
+func GetOmniLoggerWithContext(ctx Context) (*OmniLogger, error) {
 	ensureInstance()
-	return OmniLogger{
+	return &OmniLogger{
 		config:  instance.config,
 		drivers: instance.drivers,
 		context: &ctx,
